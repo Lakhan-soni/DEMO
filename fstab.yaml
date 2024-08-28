@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p136505-e1369289.adobeaemcloud.com/bin/franklin.delivery/Lakhan-soni/demo/main"
+    url: "https://author-p136505-e1369289.adobeaemcloud.com/bin/franklin.delivery/lakhan-soni/demo/main"
     type: "markup"
     suffix: ".html"
