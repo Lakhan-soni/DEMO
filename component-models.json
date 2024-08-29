@@ -205,7 +205,7 @@
     ]
   },
   {
-    "id": "bng",
+    "id": "gnb",
     "fields": [
       {
         "component": "multiselect",
