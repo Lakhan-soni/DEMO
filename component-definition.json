@@ -197,7 +197,7 @@
                 "template": {
                   "name": "GNB",
                   "model": "gnb",
-                  "banner_titleType": "h2"
+                  "gnb_titleType": "h2"
                 }
               }
             }

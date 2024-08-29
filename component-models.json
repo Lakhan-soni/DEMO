@@ -208,101 +208,76 @@
     "id": "gnb",
     "fields": [
       {
-        "component": "multiselect",
-        "name": "classes",
-        "value": "",
-        "label": "Banner Style",
-        "valueType": "string",
-        "maxSize": 3,
+        "component": "select",
+        "name": "gnb_itemType",
+        "label": "Item Alignment",
+        "value": "center",
         "options": [
           {
-            "name": "Banner Color",
-            "children": [
-              {
-                "name": "Grey",
-                "value": "gray"
-              },
-              {
-                "name": "Blue",
-                "value": "blue"
-              },
-              {
-                "name": "Teal",
-                "value": "teal"
-              }
-            ]
-          },
-          {
-            "name": "Alignment",
-            "children": [
-              {
-                "name": "Center",
-                "value": "center"
-              }
-            ]
+            "name": "Center",
+            "value": "center"
           }
         ]
       },
       {
         "component": "text",
-        "name": "banner_title",
+        "name": "gnb_title",
         "label": "Title"
       },
       {
-        "component": "select",
-        "name": "banner_titleType",
-        "label": "Title Type",
-        "value": "h2",
-        "options": [
-          {
-            "name": "h2",
-            "value": "h2"
-          },
-          {
-            "name": "h3",
-            "value": "h3"
-          }
-        ]
-      },
-      {
         "component": "richtext",
-        "name": "banner_description",
+        "name": "gnb_description",
         "label": "Description"
       },
       {
         "component": "aem-content",
-        "name": "banner_link",
+        "name": "gnb_link",
         "label": "CTA Link"
       },
       {
         "component": "text",
-        "name": "banner_linkText",
+        "name": "gnb_linkText",
         "label": "CTA Text"
       },
       {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
         "component": "select",
-        "name": "banner_linkType",
-        "label": "CTA Type",
-        "value": "primary",
+        "name": "linkType",
+        "label": "Type",
         "options": [
           {
-            "name": "Primary/Default",
+            "name": "default",
             "value": ""
           },
           {
-            "name": "Secondary",
-            "value": "secondary"
+            "name": "primary",
+            "value": "primary"
           },
           {
-            "name": "Tertiary",
-            "value": "primary"
+            "name": "secondary",
+            "value": "secondary"
           }
         ]
-      },
-      {
-        "component": "richtext",
-        "name": "foot_note",
-        "label": "Foot Note"
       }
     ]
   }
