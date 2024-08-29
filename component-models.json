@@ -221,7 +221,7 @@
       },
       {
         "component": "text",
-        "name": "gnb_title",
+        "name": "gnb_titleType",
         "label": "Title"
       },
       {
