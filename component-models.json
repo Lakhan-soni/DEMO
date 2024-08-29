@@ -239,12 +239,14 @@
       {
         "component": "aem-content",
         "name": "gnb_link",
-        "label": "CTA Link"
+        "label": "CTA Link",
+        "multi":true
       },
       {
         "component": "text",
         "name": "gnb_linkText",
-        "label": "CTA Text"
+        "label": "CTA Text",
+        "multi":true
       },
       {
         "component": "reference",

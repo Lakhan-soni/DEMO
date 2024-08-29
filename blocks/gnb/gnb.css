@@ -37,3 +37,26 @@ p.button-container {
     flex-basis: 100%;
     border-radius: 0;
 }
+#global-network {
+    color: #fff;
+    position: relative;
+    line-height: 32px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#global-network::after {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 4px;
+    background-color: #ffc400;
+    border-radius: 0;
+    opacity: 1;
+    bottom: 0;
+    left: 50%;
+    margin-left: -33px;
+    display: block;
+    z-index: 5;
+    top: 50px;
+}
