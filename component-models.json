@@ -221,8 +221,15 @@
       },
       {
         "component": "text",
-        "name": "gnb_titleType",
+        "name": "gnb_title",
         "label": "Title"
+      },
+      {
+        "component": "text",
+        "name": "gnb_titleType",
+        "value": "h2",
+        "label": "Title type",
+        "valueType": "string"
       },
       {
         "component": "richtext",

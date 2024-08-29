@@ -7,3 +7,33 @@
     background: #5abad7;
     text-align: center;
 }
+
+.gnb p{
+    margin: 3rem 7rem;
+    color: inherit;
+    font-size: 18px;
+    position: relative;
+    line-height: 24px;
+    text-align: center;
+}
+
+p.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 7rem;
+}
+
+.gnb .button-container a {
+    background-color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    font-family: inherit;
+    border: 1px solid #0e2554;
+    padding: 10px 32px 10px 23px;
+    text-align: left;
+    text-decoration: none;
+    color: #080808;
+    position: relative;
+    flex-basis: 100%;
+    border-radius: 0;
+}
