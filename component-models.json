@@ -203,5 +203,108 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "bng",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Banner Style",
+        "valueType": "string",
+        "maxSize": 3,
+        "options": [
+          {
+            "name": "Banner Color",
+            "children": [
+              {
+                "name": "Grey",
+                "value": "gray"
+              },
+              {
+                "name": "Blue",
+                "value": "blue"
+              },
+              {
+                "name": "Teal",
+                "value": "teal"
+              }
+            ]
+          },
+          {
+            "name": "Alignment",
+            "children": [
+              {
+                "name": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "banner_title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "banner_titleType",
+        "label": "Title Type",
+        "value": "h2",
+        "options": [
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "banner_description",
+        "label": "Description"
+      },
+      {
+        "component": "aem-content",
+        "name": "banner_link",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "banner_linkText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "select",
+        "name": "banner_linkType",
+        "label": "CTA Type",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary/Default",
+            "value": ""
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "Tertiary",
+            "value": "primary"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "foot_note",
+        "label": "Foot Note"
+      }
+    ]
   }
+
 ]
