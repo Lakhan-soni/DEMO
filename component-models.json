@@ -220,6 +220,28 @@
         ]
       },
       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Background Color",
+        "description": "The background color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Red",
+            "value": "bg-red"
+          },
+          {
+            "name": "Green",
+            "value": "bg-green"
+          },
+          {
+            "name": "Blue",
+            "value": "bg-blue"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "gnb_title",
         "label": "Title"
@@ -239,14 +261,12 @@
       {
         "component": "aem-content",
         "name": "gnb_link",
-        "label": "CTA Link",
-        "multi":true
+        "label": "CTA Link"
       },
       {
         "component": "text",
         "name": "gnb_linkText",
-        "label": "CTA Text",
-        "multi":true
+        "label": "CTA Text"
       },
       {
         "component": "reference",
@@ -287,6 +307,14 @@
             "value": "secondary"
           }
         ]
+      },
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "value": "",
+        "label": "AEM Content Picker",
+        "valueType": "string",
+        "multi": true
       }
     ]
   }
