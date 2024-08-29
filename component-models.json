@@ -186,7 +186,7 @@
     ]
   },
   {
-    "id": "carousel",
+    "id": "carousels",
     "fields":[
       {
         "component": "reference",
