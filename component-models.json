@@ -205,11 +205,11 @@
     ]
   },
   {
-    "id": "gnb",
+    "id": "global-network",
     "fields": [
       {
         "component": "select",
-        "name": "gnb_itemType",
+        "name": "global_network_itemType",
         "label": "Item Alignment",
         "value": "center",
         "options": [
@@ -224,7 +224,7 @@
         "name": "classes",
         "value": "",
         "label": "Background Color",
-        "description": "The background color",
+        "description": "The background color of global network",
         "valueType": "string",
         "options": [
           {
@@ -243,56 +243,71 @@
       },
       {
         "component": "text",
-        "name": "gnb_title",
+        "name": "global_network_title",
         "label": "Title"
       },
       {
         "component": "text",
-        "name": "gnb_titleType",
+        "name": "global_network_titleType",
         "value": "h2",
         "label": "Title type",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "gnb_description",
+        "name": "global_network_description",
         "label": "Description"
       },
       {
         "component": "aem-content",
-        "name": "gnb_link",
+        "name": "global_network_region_link",
         "label": "CTA Link"
       },
       {
         "component": "text",
-        "name": "gnb_linkText",
+        "name": "global_network_region_linkText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "aem-content",
+        "name": "global_network_region_link",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "global_network_region_linkText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "aem-content",
+        "name": "global_network_region_link",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "global_network_region_linkText",
         "label": "CTA Text"
       },
       {
         "component": "reference",
-        "name": "image",
+        "name": "global_network_image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "aem-content",
-        "name": "link",
-        "label": "Link"
+        "name": "global_network_efmap_link",
+        "label": "CTA Link"
       },
       {
         "component": "text",
-        "name": "linkText",
-        "label": "Text"
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
+        "name": "global_network_efmap_linkText",
+        "label": "CTA Text"
       },
       {
         "component": "select",
-        "name": "linkType",
-        "label": "Type",
+        "name": "global_network_efmap_linkType",
+        "label": "CTA Type",
         "options": [
           {
             "name": "default",

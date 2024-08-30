@@ -1,4 +1,4 @@
-.gnb{
+.global-network{
     margin-top: 3rem;
     position: relative;
     color: #fff;
@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-.gnb p{
+.global-network p{
     margin: 3rem 7rem;
     color: inherit;
     font-size: 18px;
@@ -23,7 +23,7 @@ p.button-container {
     margin: 3rem 7rem;
 }
 
-.gnb .button-container a {
+.global-network .button-container a {
     background-color: #fff;
     display: inline-block;
     font-weight: 400;
