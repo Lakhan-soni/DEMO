@@ -221,29 +221,109 @@
     ]
   },
   {
-    "id": "globalnetwork",
+    "id": "global-network",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
+            "component": "select",
+            "name": "global_network_itemType",
+            "label": "Item Alignment",
+            "value": "center",
+            "options": [
+              {
+                "name": "Center",
+                "value": "center"
+              }
+            ]
+          },
+          {
+            "component": "select",
+            "name": "classes",
+            "value": "",
+            "label": "Background Color",
+            "description": "The background color of global network",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "Red",
+                "value": "bg-red"
+              },
+              {
+                "name": "Green",
+                "value": "bg-green"
+              },
+              {
+                "name": "Blue",
+                "value": "bg-blue"
+              }
+            ]
+          },
+          {
+            "component": "text",
+            "name": "global_network_title",
+            "label": "Title"
+          },
+          {
+            "component": "text",
+            "name": "global_network_titleType",
+            "value": "h2",
+            "label": "Title type",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "global_network_description",
+            "label": "Description"
+          },
+          {
+            "component": "reference",
+            "name": "global_network_image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "aem-content",
+            "name": "global_network_efmap_link",
+            "label": "CTA Link"
+          },
+          {
+            "component": "text",
+            "name": "global_network_efmap_linkText",
+            "label": "CTA Text"
+          },
+          {
+            "component": "select",
+            "name": "global_network_efmap_linkType",
+            "label": "CTA Type",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          },
+          {
+            "component": "aem-content",
+            "name": "reference",
+            "value": "",
+            "label": "AEM Content Picker",
+            "valueType": "string",
+            "multi": true
+          },
+          {
+            "component": "aem-experience-fragment",
+            "name": "picker",
+            "label": "Experience Fragment Picker",
+            "valueType": "string",
+            "multi": true
+          }
     ]
   }
 
