@@ -37,7 +37,7 @@ p.button-container {
     flex-basis: 100%;
     border-radius: 0;
 }
-#global-network {
+.global-network h2 {
     color: #fff;
     position: relative;
     line-height: 32px;
@@ -45,7 +45,7 @@ p.button-container {
     font-size: 2rem;
 }
 
-#global-network::after {
+.global-network h2::after {
     content: "";
     position: absolute;
     width: 66px;
@@ -59,4 +59,12 @@ p.button-container {
     display: block;
     z-index: 5;
     top: 50px;
+}
+
+.global-network a.button.primary:hover {
+    text-decoration: underline;
+}
+
+.global-network a.button.primary{
+    border-radius: 30px;
 }

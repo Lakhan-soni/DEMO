@@ -260,32 +260,42 @@
       },
       {
         "component": "aem-content",
-        "name": "global_network_region_link",
+        "name": "global_network_region_link1",
         "label": "CTA Link"
       },
       {
         "component": "text",
-        "name": "global_network_region_linkText",
+        "name": "global_network_region_linkText1",
         "label": "CTA Text"
       },
       {
         "component": "aem-content",
-        "name": "global_network_region_link",
+        "name": "global_network_region_link2",
         "label": "CTA Link"
       },
       {
         "component": "text",
-        "name": "global_network_region_linkText",
+        "name": "global_network_region_linkText2",
         "label": "CTA Text"
       },
       {
         "component": "aem-content",
-        "name": "global_network_region_link",
+        "name": "global_network_region_link3",
         "label": "CTA Link"
       },
       {
         "component": "text",
-        "name": "global_network_region_linkText",
+        "name": "global_network_region_linkText3",
+        "label": "CTA Text"
+      },
+      {
+        "component": "aem-content",
+        "name": "global_network_region_link4",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "global_network_region_linkText4",
         "label": "CTA Text"
       },
       {
