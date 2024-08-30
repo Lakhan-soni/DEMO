@@ -349,6 +349,21 @@
         "multi": true
       }
     ]
+  },
+  {
+    "id":"global-network-item",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "global_network_region_link",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "global_network_region_linkText",
+        "label": "CTA Text"
+      }
+    ]
   }
 
 ]
