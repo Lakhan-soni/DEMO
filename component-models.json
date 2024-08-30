@@ -315,6 +315,14 @@
         "label": "AEM Content Picker",
         "valueType": "string",
         "multi": true
+      },
+      {
+        "component": "aem-experience-fragment",
+        "name": "picker",
+        "label": "Experience Fragment Picker",
+        "valueType": "string",
+        "variationName": "experienceFragmentVariation",
+        "multi": true
       }
     ]
   }
