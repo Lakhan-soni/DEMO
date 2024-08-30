@@ -189,7 +189,7 @@
         },
         {
           "title": "Global Network",
-          "id": "global-network",
+          "id": "gnb",
           "plugins": {
             "xwalk": {
               "page": {
