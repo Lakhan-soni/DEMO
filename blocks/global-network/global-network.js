@@ -1,3 +1,4 @@
+import { moveInstrumentation } from '../../scripts/scripts.js';
 export default function decorate(block) {
     let globalNetworkCont = [];
     const div = document.createElement('div');
@@ -13,15 +14,17 @@ export default function decorate(block) {
         } else {
             // For other rows, find anchor tags and modify them
             const a = row.querySelector('a');
+            moveInstrumentation(row, a);
             if (a) {
                 // Create and append a span to the anchor
                 const span = document.createElement('span');
-                const paragraph = document.createElement('p');
+                moveInstrumentation(a, span);
+                //const paragraph = document.createElement('p');
                 span.classList.add('icon', 'ups-icon-right-arrow');
                 a.append(span);
-                paragraph.append(a);
+                //paragraph.append(a);
                 // Append the modified anchor to the div
-                div.append(paragraph);
+                div.append(a);
                 
                 // Remove the processed row
                 row.replaceWith('');
@@ -32,6 +35,7 @@ export default function decorate(block) {
     globalNetworkCont.forEach((row, index)=>{
         if(index==1){
             row.classList.add('gnb-desc');
+            moveInstrumentation(row, div);
             row.insertAdjacentElement('afterend', div);
         }
         if(globalNetworkCont.length-1 === index){
