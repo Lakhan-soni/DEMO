@@ -205,7 +205,7 @@
     ]
   },
   {
-    "id": "gnb",
+    "id": "global-network",
     "fields": [
       {
         "component": "select",
