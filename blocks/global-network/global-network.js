@@ -2,6 +2,7 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 export default function decorate(block) {
     let globalNetworkCont = [];
     const div = document.createElement('div');
+    moveInstrumentation(block, div);
     div.classList.add('region');
 
     // Process each row in the block
@@ -24,6 +25,7 @@ export default function decorate(block) {
                 a.append(span);
                 //paragraph.append(a);
                 // Append the modified anchor to the div
+                moveInstrumentation(a, div);
                 div.append(a);
                 
                 // Remove the processed row
