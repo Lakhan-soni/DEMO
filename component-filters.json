@@ -17,7 +17,7 @@
       "columns",
       "fragment",
       "carousels",
-      "global-network"
+      "globalnetwork"
     ]
   },
   {
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "id": "global-network",
+    "id": "globalnetwork",
     "components": [
       "button"
     ]

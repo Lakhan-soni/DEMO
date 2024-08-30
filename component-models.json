@@ -221,7 +221,7 @@
     ]
   },
   {
-    "id": "global-network",
+    "id": "globalnetwork",
     "fields": [
       {
         "component": "multiselect",
