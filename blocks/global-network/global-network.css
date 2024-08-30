@@ -81,7 +81,7 @@
     border-radius: 30px;
 } */
 
-.icon {
+.region .icon {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -107,5 +107,16 @@
     display: block;
     font-size: 1rem !important;
     border: 0px !important;
+}
+
+@media (max-width: 991.98px) {
+    .global-network .region {
+        flex-direction: column;
+        margin: 3%;
+        width: 93%;
+    }
+    .gnb-desc {
+        margin: 3rem 1rem;
+    }
 }
 
