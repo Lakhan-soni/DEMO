@@ -321,7 +321,6 @@
         "name": "picker",
         "label": "Experience Fragment Picker",
         "valueType": "string",
-        "variationName": "experienceFragmentVariation",
         "multi": true
       }
     ]
