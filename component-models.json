@@ -308,21 +308,6 @@
                 "value": "secondary"
               }
             ]
-          },
-          {
-            "component": "aem-content",
-            "name": "reference",
-            "value": "",
-            "label": "AEM Content Picker",
-            "valueType": "string",
-            "multi": true
-          },
-          {
-            "component": "aem-experience-fragment",
-            "name": "picker",
-            "label": "Experience Fragment Picker",
-            "valueType": "string",
-            "multi": true
           }
     ]
   }

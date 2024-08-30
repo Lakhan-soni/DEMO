@@ -1,17 +1,40 @@
-
 export default function decorate(block) {
-    let global_network_cont = [];
-    [...block.children].forEach((row, rowIndex) => {
-        if(rowIndex == 0){
-        [...row.children].forEach((p)=>{
-            global_network_cont = [...p.children];
-        })
-    }
-    });
+    let globalNetworkCont = [];
+    const div = document.createElement('div');
+    div.classList.add('region');
 
-    global_network_cont.forEach((row, index)=>{
+    // Process each row in the block
+    [...block.children].forEach((row, rowIndex) => {
+        if (rowIndex === 0) {
+            // On the first row, collect children of paragraph elements
+            [...row.children].forEach((p) => {
+                globalNetworkCont = [...p.children];
+            });
+        } else {
+            // For other rows, find anchor tags and modify them
+            const a = row.querySelector('a');
+            if (a) {
+                // Create and append a span to the anchor
+                const span = document.createElement('span');
+                span.classList.add('icon', 'ups-icon-right-arrow');
+                a.append(span);
+                
+                // Append the modified anchor to the div
+                div.append(a);
+                
+                // Remove the processed row
+                row.replaceWith('');
+            }
+        }
+    });
+    // Insert the div after the second item in globalNetworkCont
+    globalNetworkCont.forEach((row, index)=>{
         if(index==1){
             row.classList.add('gnb-desc');
+            row.insertAdjacentElement('afterend', div);
+        }
+        if(globalNetworkCont.length-1 === index){
+            row.classList.add('gnb-efmap');
         }
     })
 
