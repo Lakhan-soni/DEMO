@@ -2,7 +2,7 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 export default function decorate(block) {
     let globalNetworkCont = [];
     const div = document.createElement('div');
-    //moveInstrumentation(block, div);
+    moveInstrumentation(block, div);
     div.classList.add('region');
 
     // Process each row in the block
