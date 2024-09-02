@@ -25,10 +25,11 @@ export default function decorate(block) {
                 a.append(span);
                 //paragraph.append(a);
                 // Append the modified anchor to the div
-                moveInstrumentation(a, div);
+                //moveInstrumentation(a, div);
                 div.append(a);
                 
                 // Remove the processed row
+                moveInstrumentation(row, '');
                 row.replaceWith('');
             }
         }
@@ -37,7 +38,7 @@ export default function decorate(block) {
     globalNetworkCont.forEach((row, index)=>{
         if(index==1){
             row.classList.add('gnb-desc');
-            //moveInstrumentation(row, div);
+            moveInstrumentation(row, div);
             row.insertAdjacentElement('afterend', div);
         }
         if(globalNetworkCont.length-1 === index){
