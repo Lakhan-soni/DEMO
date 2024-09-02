@@ -35,14 +35,16 @@ export default function decorate(block) {
     });
     // Insert the div after the second item in globalNetworkCont
     globalNetworkCont.forEach((row, index)=>{
+        moveInstrumentation(row, row);
         if(index==1){
             row.classList.add('gnb-desc');
-           moveInstrumentation(row, div);
+            moveInstrumentation(row, div);
             row.insertAdjacentElement('afterend', div);
         }
         if(globalNetworkCont.length-1 === index){
             row.classList.add('gnb-efmap');
         }
+        
     })
 
 
