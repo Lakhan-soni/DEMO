@@ -25,6 +25,7 @@ export default function decorate(block) {
                 a.append(span);
                 //paragraph.append(a);
                 // Append the modified anchor to the div
+                moveInstrumentation(div, a);
                 div.append(a);
                 
                 // Remove the processed row
