@@ -203,6 +203,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Global Network item",
+          "id": "global-network-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Global Network item",
+                  "model": "global-network-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

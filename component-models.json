@@ -310,6 +310,21 @@
             ]
           }
     ]
+  },
+  {
+    "id": "global-network-item",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "CTA Text"
+      }
+    ]
   }
 
 ]

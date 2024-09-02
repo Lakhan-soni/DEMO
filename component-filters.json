@@ -51,7 +51,7 @@
   {
     "id": "global-network",
     "components": [
-      "button"
+      "global-network-item"
     ]
   }
 
