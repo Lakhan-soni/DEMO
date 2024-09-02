@@ -36,7 +36,7 @@ export default function decorate(block) {
     globalNetworkCont.forEach((row, index)=>{
         if(index==1){
             row.classList.add('gnb-desc');
-            //moveInstrumentation(row, div);
+            moveInstrumentation(row, div);
             row.insertAdjacentElement('afterend', div);
         }
         if(globalNetworkCont.length-1 === index){
