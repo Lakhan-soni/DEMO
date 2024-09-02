@@ -15,7 +15,7 @@ export default function decorate(block) {
         } else {
             // For other rows, find anchor tags and modify them
             const a = row.querySelector('a');
-            moveInstrumentation(row, a);
+            //moveInstrumentation(row, a);
             if (a) {
                 // Create and append a span to the anchor
                 const span = document.createElement('span');
@@ -25,7 +25,7 @@ export default function decorate(block) {
                 a.append(span);
                 //paragraph.append(a);
                 // Append the modified anchor to the div
-                //moveInstrumentation(a, div);
+                moveInstrumentation(a, div);
                 div.append(a);
                 
                 // Remove the processed row
