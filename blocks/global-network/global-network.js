@@ -19,13 +19,12 @@ export default function decorate(block) {
             if (a) {
                 // Create and append a span to the anchor
                 const span = document.createElement('span');
-                //moveInstrumentation(a, span);
+                moveInstrumentation(a, span);
                 //const paragraph = document.createElement('p');
                 span.classList.add('icon', 'ups-icon-right-arrow');
                 a.append(span);
                 //paragraph.append(a);
                 // Append the modified anchor to the div
-                //moveInstrumentation(a, div);
                 div.append(a);
                 
                 // Remove the processed row
@@ -37,7 +36,7 @@ export default function decorate(block) {
     globalNetworkCont.forEach((row, index)=>{
         if(index==1){
             row.classList.add('gnb-desc');
-            moveInstrumentation(row, div);
+            //moveInstrumentation(row, div);
             row.insertAdjacentElement('afterend', div);
         }
         if(globalNetworkCont.length-1 === index){
