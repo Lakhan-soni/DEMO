@@ -223,51 +223,10 @@
   {
     "id": "global-network",
     "fields": [
-      {
-            "component": "select",
-            "name": "global_network_itemType",
-            "label": "Item Alignment",
-            "value": "center",
-            "options": [
-              {
-                "name": "Center",
-                "value": "center"
-              }
-            ]
-          },
-          {
-            "component": "select",
-            "name": "classes",
-            "value": "",
-            "label": "Background Color",
-            "description": "The background color of global network",
-            "valueType": "string",
-            "options": [
-              {
-                "name": "Red",
-                "value": "bg-red"
-              },
-              {
-                "name": "Green",
-                "value": "bg-green"
-              },
-              {
-                "name": "Blue",
-                "value": "bg-blue"
-              }
-            ]
-          },
           {
             "component": "text",
             "name": "global_network_title",
             "label": "Title"
-          },
-          {
-            "component": "text",
-            "name": "global_network_titleType",
-            "value": "h2",
-            "label": "Title type",
-            "valueType": "string"
           },
           {
             "component": "richtext",
@@ -289,25 +248,6 @@
             "component": "text",
             "name": "global_network_efmap_linkText",
             "label": "CTA Text"
-          },
-          {
-            "component": "select",
-            "name": "global_network_efmap_linkType",
-            "label": "CTA Type",
-            "options": [
-              {
-                "name": "default",
-                "value": ""
-              },
-              {
-                "name": "primary",
-                "value": "primary"
-              },
-              {
-                "name": "secondary",
-                "value": "secondary"
-              }
-            ]
           }
     ]
   },

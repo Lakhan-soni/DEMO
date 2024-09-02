@@ -198,7 +198,8 @@
                 "template": {
                   "name": "Global Network",
                   "model": "global-network",
-                  "filter": "global-network"
+                  "filter": "global-network",
+                  "global_network_titleType": "h2"
                 }
               }
             }
