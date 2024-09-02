@@ -29,7 +29,7 @@ export default function decorate(block) {
                 div.append(a);
                 
                 // Remove the processed row
-                moveInstrumentation(row, '');
+                //moveInstrumentation(row, '');
                 row.replaceWith('');
             }
         }
