@@ -2,7 +2,7 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 export default function decorate(block) {
     let globalNetworkCont = [];
     const div = document.createElement('div');
-    moveInstrumentation(block, div);
+   // moveInstrumentation(block, div);
     div.classList.add('region');
 
     // Process each row in the block
@@ -15,17 +15,17 @@ export default function decorate(block) {
         } else {
             // For other rows, find anchor tags and modify them
             const a = row.querySelector('a');
-            moveInstrumentation(row, a);
+            //moveInstrumentation(row, a);
             if (a) {
                 // Create and append a span to the anchor
                 const span = document.createElement('span');
-                moveInstrumentation(a, span);
+               // moveInstrumentation(a, span);
                 //const paragraph = document.createElement('p');
                 span.classList.add('icon', 'ups-icon-right-arrow');
                 a.append(span);
                 //paragraph.append(a);
                 // Append the modified anchor to the div
-                moveInstrumentation(div, a);
+                //moveInstrumentation(div, a);
                 div.append(a);
                 
                 // Remove the processed row
@@ -37,7 +37,7 @@ export default function decorate(block) {
     globalNetworkCont.forEach((row, index)=>{
         if(index==1){
             row.classList.add('gnb-desc');
-            moveInstrumentation(row, div);
+           // moveInstrumentation(row, div);
             row.insertAdjacentElement('afterend', div);
         }
         if(globalNetworkCont.length-1 === index){
