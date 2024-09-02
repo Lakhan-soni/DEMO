@@ -1,5 +1,5 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
-export default function decorate(block) {
+export default async function decorate(block) {
     let globalNetworkCont = [];
     const div = document.createElement('div');
    // moveInstrumentation(block, div);
