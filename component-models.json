@@ -189,34 +189,32 @@
     "id": "carousel",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "component": "text",
+        "name": "headline_title",
+        "label": "Headline Title"
+      },
+      {
+        "component": "select",
+        "name": "headline_type",
+        "label": "Headline Type",
+        "options": [
+          {
+            "name": "h2",
+            "value": "h2"
+          }
+        ]
       },
       {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "carousels",
-    "fields": [
+        "name": "carousel_description",
+        "label": "Description"
+      },
       {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
-        ]
+        "component": "text",
+        "valueType": "number",
+        "name": "time_interval",
+        "value": "",
+        "label": "Time Interval"
       }
     ]
   },

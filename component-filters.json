@@ -16,7 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "carousels",
+      "carousel",
       "global-network"
     ]
   },
@@ -42,10 +42,9 @@
     ]
   },
   {
-    "id": "carousels",
+    "id": "carousel",
     "components": [
-      "carousel",
-      "button"
+      "column"
     ]
   },
   {
