@@ -195,8 +195,9 @@
       },
       {
         "component": "select",
-        "name": "headline_type",
+        "name": "headline_titletype",
         "label": "Headline Type",
+        "valueType":"string",
         "options": [
           {
             "name": "h2",
