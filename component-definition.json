@@ -167,7 +167,8 @@
                 "template": {
                   "name": "Carousel",
                   "model": "carousel",
-                  "filter": "carousel"
+                  "filter": "carousel",
+                  "headline_titletype": "h2"
                 }
               }
             }
