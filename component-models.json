@@ -198,7 +198,7 @@
         "name": "headline_titleType",
         "label": "Headline Type",
         "valueType":"string",
-        "value":"h2",
+        "value":"",
         "options": [
           {
             "name": "h2",
