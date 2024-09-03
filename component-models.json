@@ -211,11 +211,18 @@
         "label": "Description"
       },
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "time_interval",
-        "value": "",
-        "label": "Time Interval"
+       "component": "number",
+      "valueType": "number",
+      "name": "field1",
+      "label": "Number Field",
+      "description": "This is a number field.",
+      "required": true,
+      "placeholder": null,
+      "validation": {
+        "numberMin": 0,
+        "numberMax": 88,
+        "customErrorMsg": "You also need 1.21 gigawatts."
+      }
       }
     ]
   },
