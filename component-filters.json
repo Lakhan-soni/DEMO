@@ -44,8 +44,7 @@
   {
     "id": "carousel",
     "components": [
-      "columns",
-      "cards"
+      "carousel-item"
     ]
   },
   {

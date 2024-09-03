@@ -223,28 +223,25 @@
         "numberMax": 88,
         "customErrorMsg": "You also need 1.21 gigawatts."
       }
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "carousel_image",
+        "label": "Carousel Image",
+        "multi": false
       },
       {
-        "component": "container",
-        "label": "Container",
-        "name": "container",
-        "valueType": "string",
-        "multi":true,
-        "collapsible": true,
-        "fields": [
-          {
-            "component": "text-input",
-            "label": "Simple Text 1",
-            "name": "text",
-            "valueType": "string"
-          },
-          {
-            "component": "text-input",
-            "label": "Simple Text 2",
-            "name": "text2",
-            "valueType": "string"
-          }
-        ]
+        "component": "richtext",
+        "name": "carousel_text",
+        "value": "",
+        "label": "Carousel Text",
+        "valueType": "string"
       }
     ]
   },
