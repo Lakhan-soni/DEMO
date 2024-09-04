@@ -175,7 +175,7 @@
     width: 40.625rem;
     margin-top: 2rem;
 }
-.global-network p:first-of-type{
+.global-network .global-network-description{
     margin: 3rem 7rem;
     font-size: 1.125rem;
 }
