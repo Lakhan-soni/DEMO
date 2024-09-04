@@ -246,51 +246,83 @@
       }
     ]
   },
-  {
-    "id": "global-network",
-    "fields": [
-          {
-            "component": "text",
-            "name": "global_network_title",
-            "label": "Title"
-          },
-          {
-            "component": "richtext",
-            "name": "global_network_description",
-            "label": "Description"
-          },
-          {
-            "component": "reference",
-            "name": "global_network_image",
-            "label": "Image",
-            "multi": false
-          },
-          {
-            "component": "aem-content",
-            "name": "global_network_efmap_link",
-            "label": "CTA Link"
-          },
-          {
-            "component": "text",
-            "name": "global_network_efmap_linkText",
-            "label": "CTA Text"
+    {
+      "id": "global-network",
+      "fields": [
+                {
+                  "component": "text",
+                  "name": "globalNetwork_title",
+                  "label": "Title"
+                },
+                {
+                  "component": "text",
+                  "name": "globalNetwork_titleType",
+                  "value": "h2",
+                  "label": "Title Type",
+                  "valueType": "string"
+                },
+                {
+                  "component": "richtext",
+                  "name": "globalNetwork_description",
+                  "label": "Description"
+                },
+                {
+                  "component": "aem-content",
+                  "name": "globalNetwork_link1",
+                  "label": "CTA Link"
+                },
+                {
+                  "component": "text",
+                  "name": "globalNetwork_link1Text",
+                  "label": "CTA Text"
+                },
+                {
+                  "component": "aem-content",
+                  "name": "globalNetwork_link2",
+                  "label": "CTA Link"
+                },
+                {
+                  "component": "text",
+                  "name": "globalNetwork_link2Text",
+                  "label": "CTA Text"
+                },
+                {
+                  "component": "aem-content",
+                  "name": "globalNetwork_link3",
+                  "label": "CTA Link"
+                },
+                {
+                  "component": "text",
+                  "name": "globalNetwork_link3Text",
+                  "label": "CTA Text"
+                },
+                {
+                  "component": "aem-content",
+                  "name": "globalNetwork_link4",
+                  "label": "CTA Link"
+                },
+                {
+                  "component": "text",
+                  "name": "globalNetwork_link4Text",
+                  "label": "CTA Text"
+                },
+                {
+                  "component": "reference",
+                  "name": "globalNetwork_image",
+                  "label": "Image",
+                  "multi": false
+                },
+                {
+                  "component": "aem-content",
+                  "name": "globalNetwork_ctaLink",
+                  "label": "CTA Link"
+                },
+                {
+                  "component": "text",
+                  "name": "globalNetwork_ctaText",
+                  "label": "CTA Text"
+                }
+              ]
           }
-    ]
-  },
-  {
-    "id": "global-network-item",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "CTA Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "CTA Text"
-      }
-    ]
-  }
 
 ]

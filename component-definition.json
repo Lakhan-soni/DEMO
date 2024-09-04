@@ -199,23 +199,7 @@
                 "template": {
                   "name": "Global Network",
                   "model": "global-network",
-                  "filter": "global-network",
-                  "global_network_title": "h2"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Global Network item",
-          "id": "global-network-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Global Network item",
-                  "model": "global-network-item"
+                  "globalNetwork_titleType": "h2"
                 }
               }
             }
