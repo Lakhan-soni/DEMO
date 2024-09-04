@@ -144,6 +144,16 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
   import('./sidekick.js').then(({ initSidekick }) => initSidekick());
 }
+/**
+ * create keylines from heading elements
+ * @param {Element} heading the heading element
+ */
+export function createKeyLine(heading) {
+  const u = heading.querySelector('u') || document.createElement('u');
+  heading.classList.add('keyline');
+  u.textContent = heading.textContent;
+  heading.replaceChildren(u);
+}
 
 async function loadPage() {
   await loadEager(document);

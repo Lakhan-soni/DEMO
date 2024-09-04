@@ -224,3 +224,21 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+
+.keyline {
+  margin-bottom: 1.25rem;
+}
+
+.keyline u {
+  text-decoration: none;
+}
+
+.keyline u::after {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 0.25rem;
+  margin: 1rem 0 0;
+  background-color: #ffc400;
+}
+

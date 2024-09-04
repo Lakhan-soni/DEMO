@@ -124,49 +124,15 @@
 
 
 
-import { moveInstrumentation } from '../../scripts/scripts.js';
+import { createKeyLine } from '../../scripts/scripts.js';
 export default function decorate(block) {
-    let globalNetworkCont = [];
-    // create and add class for region button link
-    const div = document.createElement('div');
-    div.classList.add('region');
-
-    // Process each row in the block
-    [...block.children].forEach((row, rowIndex) => {
-        if (rowIndex === 0) {
-            // On the first row, collect children of paragraph elements
-            [...row.children].forEach((p) => {
-                globalNetworkCont = [...p.children];
-            });
-        } else {
-            // For other rows, find anchor tags and modify them
-            const a = row.querySelector('a');
-            moveInstrumentation(row, a);
-            if (a) {
-                // Create and append a span to the anchor
-                const span = document.createElement('span');
-                moveInstrumentation(a, span);
-                span.classList.add('icon', 'ups-icon-right-arrow');
-                a.append(span);
-                // Append the modified anchor to the div
-                div.append(a);
-                
-                // Remove the processed row
-                row.replaceWith('');
-            }
-        }
-    });
-    // Insert the div after the second item in globalNetworkCont
-    globalNetworkCont.forEach((row, index)=>{
-        if(index==1){
-            row.classList.add('gnb-desc');
-            moveInstrumentation(row, div);
-            row.insertAdjacentElement('afterend', div);
-        }
-        if(globalNetworkCont.length-1 === index){
-            row.classList.add('gnb-efmap');
-        }
-    })
-
+    block.querySelectorAll('h2').forEach(createKeyLine);
+block.querySelectorAll('.button-container').forEach((button, index) => {
+    if(index < block.querySelectorAll('.button-container').length-1){
+        button.classList.add('region-btn');
+    }else{
+        button.classList.add('exp-facility-map-btn');
+    }
+});
 
 }
