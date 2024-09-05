@@ -226,27 +226,33 @@
     "id": "carousel-item",
     "fields": [
       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "carousel Style",
+        "valueType": "string",
+        "maxSize": 3,
+        "options": [
+          {
+            "name": "carousel Type",
+            "children": [
+              {
+                "name": "Left",
+                "value": "left"
+              },
+              {
+                "name": "Right",
+                "value": "right"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image"
-      },
-      {
-        "component": "select",
-        "name": "classes",
-        "label": "content aligned",
-        "valueType":"string",
-        "value":"",
-        "options": [
-          {
-            "name": "Left",
-            "value": "content-left"
-          },
-          {
-            "name": "Right",
-            "value": "content-right"
-          }
-        ]
       },
       {
         "component": "text",
