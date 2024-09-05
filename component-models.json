@@ -207,11 +207,6 @@
         ]
       },
       {
-        "component": "richtext",
-        "name": "carousel_description",
-        "label": "Description"
-      },
-      {
        "component": "number",
       "valueType": "number",
       "name": "field1",
@@ -235,6 +230,23 @@
         "valueType": "string",
         "name": "image",
         "label": "Image"
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "content aligned",
+        "valueType":"string",
+        "value":"",
+        "options": [
+          {
+            "name": "Left",
+            "value": "content-left"
+          },
+          {
+            "name": "Right",
+            "value": "content-right"
+          }
+        ]
       },
       {
         "component": "text",
