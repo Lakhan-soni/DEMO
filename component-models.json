@@ -388,21 +388,7 @@
                 "name": "tab_title",
                 "label": "Tab Title"
               
-             },
-             {
-              "component": "number",
-              "name": "tab_position",
-              "label": "Tab Positon",
-              "valueType": "number",
-              "value": 0
-            },
-            {
-              "component": "aem-content",
-              "name": "reference",
-              "value": "",
-              "label": "AEM Content Picker",
-              "valueType": "string"
-            }
+             }
             ]
           }
 
