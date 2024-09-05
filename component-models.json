@@ -369,7 +369,7 @@
             "fields": [
                   {
                     "component": "multiselect",
-                    "name": "Tab_orientation",
+                    "name": "classes",
                     "label": "Orientation Select",
                     "valueType": "string",
                     "options": [
@@ -384,6 +384,12 @@
             "id":"tab",
             "fields":[
               {
+                "component": "text",
+                "name": "tab_title",
+                "label": "Tab Title"
+              
+            },
+              {
                 "component": "reference",
                 "valueType": "string",
                 "name": "image",
@@ -395,11 +401,20 @@
                 "label": "Alt Text"
               },
               {
+                "component": "richtext",
+                "name": "Tab_description",
+                "label": "Description"
+              },
+              {
+                "component": "aem-content",
+                "name": "Tab_link",
+                "label": "Link"
+              },
+              {
                 "component": "text",
-                "name": "tab_title",
-                "label": "Tab Title"
-              
-            }
+                "name": "Tab_linkText",
+                "label": "Link Text"
+              }
             ]
           }
 
