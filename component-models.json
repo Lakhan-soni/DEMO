@@ -388,33 +388,21 @@
                 "name": "tab_title",
                 "label": "Tab Title"
               
+             },
+             {
+              "component": "number",
+              "name": "tab_position",
+              "label": "Tab Positon",
+              "valueType": "number",
+              "value": 0
             },
-              {
-                "component": "reference",
-                "valueType": "string",
-                "name": "image",
-                "label": "Image"
-              },
-              {
-                "component": "text",
-                "name": "imageAlt",
-                "label": "Alt Text"
-              },
-              {
-                "component": "richtext",
-                "name": "Tab_description",
-                "label": "Description"
-              },
-              {
-                "component": "aem-content",
-                "name": "Tab_link",
-                "label": "Link"
-              },
-              {
-                "component": "text",
-                "name": "Tab_linkText",
-                "label": "Link Text"
-              }
+            {
+              "component": "aem-content",
+              "name": "reference",
+              "value": "",
+              "label": "AEM Content Picker",
+              "valueType": "string"
+            }
             ]
           }
 
