@@ -23,6 +23,7 @@
   }
 .slide div{
   width: 50%;
+  flex: 1;
 }
 .slide img {
     height: 100%;
@@ -59,4 +60,6 @@ section.carousel-container {
   /* Styles for the active dot button */
   color: red; /* Example style */
 }
-  
+.carousel.left .slide-img {
+  order: 2;
+} 

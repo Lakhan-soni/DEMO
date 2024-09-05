@@ -33,6 +33,9 @@ export default function decorate(block) {
       } else if (index > 1) {
         row.classList.add('slide');
         Array.from(row.children).forEach((col, colIndex) => {
+            if (colIndex === 0) {
+                col.classList.add('slide-img');
+              }
           if (colIndex === 1) {
             col.classList.add('slide-text');
           }
