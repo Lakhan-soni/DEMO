@@ -20,13 +20,13 @@ export default function decorate(block) {
   // Create and append previous button
   const previousBtn = document.createElement('button');
   previousBtn.classList.add('btn', 'btn-prvs');
-  previousBtn.textContent = 'prev';
+  previousBtn.textContent = '\u{003C}';
   block.append(previousBtn);
 
   // Create and append next button
   const nextBtn = document.createElement('button');
   nextBtn.classList.add('btn', 'btn-next');
-  nextBtn.textContent = 'next';
+  nextBtn.textContent = '\u{003E}';
   block.append(nextBtn);
 
   // Create a wrapper for slides

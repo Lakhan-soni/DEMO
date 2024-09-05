@@ -233,16 +233,45 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "carousel_image",
-        "label": "Carousel Image",
-        "multi": false
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "text",
+        "name": "carousel_item_title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "carousel_item_titleType",
+        "label": "Title Type",
+        "value": "h3",
+        "hidden": true
       },
       {
         "component": "richtext",
-        "name": "carousel_text",
-        "value": "",
-        "label": "Carousel Text",
-        "valueType": "string"
+        "name": "carousel_item_description",
+        "label": "Description"
+      },
+      {
+        "component": "aem-content",
+        "name": "carousel_item_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "carousel_item_linkText",
+        "label": "Link Text"
+      },
+      {
+        "component": "hidden",
+        "name": "carousel_item_linkType",
+        "value": "primary"
       }
     ]
   },
