@@ -365,24 +365,18 @@
               ]
           },
           {
-            "id": "tabs",
-            "fields": [
-                  {
-                    "component": "multiselect",
-                    "name": "classes",
-                    "label": "Orientation Select",
-                    "valueType": "string",
-                    "options": [
-                      { "name": "Vertical", "value": "vertical" },
-                      { "name": "Horizontal", "value": "horizontal" }
-                    ]
-                  }
-                ]
-
-          },
-          {
             "id":"tab",
             "fields":[
+              {
+                "component": "multiselect",
+                "name": "classes",
+                "label": "Orientation Select",
+                "valueType": "string",
+                "options": [
+                  { "name": "Vertical", "value": "vertical" },
+                  { "name": "Horizontal", "value": "horizontal" }
+                ]
+              },
               {
                 "component": "text",
                 "name": "tab_title",
