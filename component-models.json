@@ -365,7 +365,7 @@
               ]
           },
           {
-            "id": "tab",
+            "id": "tabs",
             "fields": [
                   {
                     "component": "multiselect",
@@ -376,22 +376,31 @@
                       { "name": "Vertical", "value": "vertical" },
                       { "name": "Horizontal", "value": "horizontal" }
                     ]
-                  },
-                  {
-                      "component": "text",
-                      "name": "tab_title",
-                      "label": "Tab Title"
-                    
-                  },
-                  {
-                    "component": "aem-content-fragment",
-                    "name": "picker",
-                    "label": "Content Fragment Picker",
-                    "valueType": "string",
-                    "variationName": "contentFragmentVariation"
                   }
                 ]
 
+          },
+          {
+            "id":"tab",
+            "fields":[
+              {
+                "component": "reference",
+                "valueType": "string",
+                "name": "image",
+                "label": "Image"
+              },
+              {
+                "component": "text",
+                "name": "imageAlt",
+                "label": "Alt Text"
+              },
+              {
+                "component": "text",
+                "name": "tab_title",
+                "label": "Tab Title"
+              
+            }
+            ]
           }
 
 ]

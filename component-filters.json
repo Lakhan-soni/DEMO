@@ -18,7 +18,7 @@
       "fragment",
       "carousel",
       "global-network",
-      "tab"
+      "tabs"
     ]
   },
   {
@@ -46,6 +46,12 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tab"
     ]
   }
 
