@@ -1,70 +1,114 @@
-// export default function decorate(block) {
-//   // Extract all rows (children of the block)
-//   const rows = Array.from(block.children);
-//   let intervalTime = 0;
-
-//   // Add 'slide' class and handle content for slides
-//   rows.forEach((row, index) => {
-//       if (index === 2) {
-//           intervalTime = parseInt(row.innerText, 10); // Parse interval time
-//       } else if (index > 2) {
-//           row.classList.add('slide');
-//           Array.from(row.children).forEach((col, colIndex) => {
-//               if (colIndex === 1) {
-//                   col.classList.add('slide-text');
-//               }
-//           });
-//       }
-//   });
-
-//   // Create and append previous button
-//   const previousBtn = document.createElement('button');
-//   previousBtn.classList.add('btn', 'btn-prvs');
-//   previousBtn.textContent = '\u{003C}';
-//   block.append(previousBtn);
-
-//   // Create and append next button
-//   const nextBtn = document.createElement('button');
-//   nextBtn.classList.add('btn', 'btn-next');
-//   nextBtn.textContent = '\u{003E}';
-//   block.append(nextBtn);
-
-//   // Create a wrapper for slides
-//   const slideDiv = document.createElement('div');
-//   slideDiv.classList.add('carousel-slide');
+export default function decorate(block) {
+    // Extract all rows (children of the block)
+    const rows = Array.from(block.children);
+    let intervalTime = 3000; // Default interval time
   
-//   // Append slides to the new wrapper
-//   const slides = document.querySelectorAll('.slide');
-//   slides.forEach(slide => slideDiv.appendChild(slide));
+    // Create slide wrapper and buttons container
+    const slideDiv = document.createElement('div');
+    slideDiv.classList.add('carousel-slide');
+    const buttonCont = document.createElement('div');
+    buttonCont.classList.add('carousel-buttons');
   
-//   // Replace all slide elements with the new wrapper
-//   block.insertBefore(slideDiv, nextBtn);
-
-//   // Set initial position for slides
-//   slides.forEach((slide, index) => {
-//       slide.style.transform = `translateX(${index * 100}%)`;
-//   });
-
-//   // Carousel navigation
-//   let curSlide = 0;
-//   const maxSlide = slides.length - 1;
-
-//   // Next slide button event
-//   nextBtn.addEventListener('click', () => {
-//       curSlide = (curSlide === maxSlide) ? 0 : curSlide + 1;
-//       updateSlidePosition();
-//   });
-
-//   // Previous slide button event
-//   previousBtn.addEventListener('click', () => {
-//       curSlide = (curSlide === 0) ? maxSlide : curSlide - 1;
-//       updateSlidePosition();
-//   });
-
-//   // Update slide positions based on the current slide
-//   function updateSlidePosition() {
-//       slides.forEach((slide, index) => {
-//           slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
-//       });
-//   }
-// }
+    // Create buttons
+    const buttons = {
+      previous: createButton('btn btn-prvs', '\u{003C}'),
+      play: createButton('btn btn-play', '\u{25B6}'), // '▶' for play button
+      dot: [],
+      next: createButton('btn btn-next', '\u{003E}')
+    };
+  
+    // Helper function to create buttons
+    function createButton(classes, text) {
+      const button = document.createElement('button');
+      button.className = classes;
+      button.textContent = text;
+      return button;
+    }
+  
+    // Process rows to setup slides and interval
+    rows.forEach((row, index) => {
+      if (index === 1) {
+        intervalTime = parseInt(row.innerText, 10); // Parse interval time
+        row.remove();
+      } else if (index > 1) {
+        row.classList.add('slide');
+        Array.from(row.children).forEach((col, colIndex) => {
+          if (colIndex === 1) {
+            col.classList.add('slide-text');
+          }
+        });
+        slideDiv.appendChild(row);
+        if (index > 2) {
+          buttons.dot.push(createButton('btn btn-dot', '•')); // Using '•' for dots
+        }
+      }
+    });
+  
+    // Append buttons to container
+    buttonCont.appendChild(buttons.previous);
+    buttonCont.appendChild(buttons.play);
+    buttons.dot.forEach(dot => buttonCont.appendChild(dot));
+    buttonCont.appendChild(buttons.next);
+  
+    // Append slide wrapper and buttons container to the block
+    block.appendChild(slideDiv);
+    block.appendChild(buttonCont);
+  
+    // Set initial position for slides
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    slides.forEach((slide, index) => {
+      slide.style.transform = `translateX(${index * 100}%)`;
+    });
+  
+    // Carousel navigation
+    let curSlide = 0;
+    const maxSlide = slides.length - 1;
+    let slideInterval = null; // To store interval reference
+  
+    function updateSlidePosition() {
+      slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+      });
+    }
+  
+    function startInterval() {
+      slideInterval = setInterval(() => {
+        curSlide = (curSlide === maxSlide) ? 0 : curSlide + 1;
+        updateSlidePosition();
+      }, intervalTime);
+    }
+  
+    function stopInterval() {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+      }
+    }
+  
+    // Event listeners for buttons
+    buttons.next.addEventListener('click', () => {
+      stopInterval(); // Stop interval on manual navigation
+      curSlide = (curSlide === maxSlide) ? 0 : curSlide + 1;
+      updateSlidePosition();
+    });
+  
+    buttons.previous.addEventListener('click', () => {
+      stopInterval(); // Stop interval on manual navigation
+      curSlide = (curSlide === 0) ? maxSlide : curSlide - 1;
+      updateSlidePosition();
+    });
+  
+    buttons.play.addEventListener('click', () => {
+      if (slideInterval) {
+        stopInterval();
+        buttons.play.textContent = '\u{25B6}'; // Change to play symbol
+      } else {
+        startInterval();
+        buttons.play.textContent = '\u{23F8}'; // Change to pause symbol
+      }
+    });
+  
+    // Initialize interval
+    startInterval();
+  }
+  

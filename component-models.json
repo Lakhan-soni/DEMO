@@ -232,9 +232,8 @@
       "required": true,
       "placeholder": null,
       "validation": {
-        "numberMin": 0,
-        "numberMax": 88,
-        "customErrorMsg": "You also need 1.21 gigawatts."
+        "numberMin": 2000,
+        "numberMax": 100000
       }
       }
     ]
