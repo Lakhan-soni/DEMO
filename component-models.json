@@ -232,9 +232,6 @@
         "label": "carousel Style",
         "valueType": "string",
         "options": [
-          {
-            "name": "carousel Type",
-            "children": [
               {
                 "name": "Left",
                 "value": "left"
@@ -244,8 +241,6 @@
                 "value": "right"
               }
             ]
-          }
-        ]
       },
       {
         "component": "reference",
