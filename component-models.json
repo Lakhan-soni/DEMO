@@ -189,6 +189,23 @@
     "id": "carousel",
     "fields": [
       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "carousel Style",
+        "valueType": "string",
+        "options": [
+              {
+                "name": "Left",
+                "value": "left"
+              },
+              {
+                "name": "Right",
+                "value": "right"
+              }
+            ]
+      },
+      {
         "component": "text",
         "name": "headline_title",
         "label": "Headline Title"
@@ -225,23 +242,6 @@
   {
     "id": "carousel-item",
     "fields": [
-      {
-        "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "carousel Style",
-        "valueType": "string",
-        "options": [
-              {
-                "name": "Left",
-                "value": "left"
-              },
-              {
-                "name": "Right",
-                "value": "right"
-              }
-            ]
-      },
       {
         "component": "reference",
         "valueType": "string",
