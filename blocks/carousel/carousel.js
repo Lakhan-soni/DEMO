@@ -38,7 +38,7 @@ export default function decorate(block) {
           }
         });
         slideDiv.appendChild(row);
-        if (index > 2) {
+        if (index >= 2) {
           buttons.dot.push(createButton('btn btn-dot', '•')); // Using '•' for dots
         }
       }
@@ -69,6 +69,11 @@ export default function decorate(block) {
       slides.forEach((slide, index) => {
         slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
       });
+  
+      // Update dot indicators
+      buttons.dot.forEach((dot, index) => {
+        dot.classList.toggle('active', index === curSlide);
+      });
     }
   
     function startInterval() {
@@ -76,12 +81,14 @@ export default function decorate(block) {
         curSlide = (curSlide === maxSlide) ? 0 : curSlide + 1;
         updateSlidePosition();
       }, intervalTime);
+      buttons.play.textContent = '\u{23F8}'; // Change to pause symbol
     }
   
     function stopInterval() {
       if (slideInterval) {
         clearInterval(slideInterval);
         slideInterval = null;
+        buttons.play.textContent = '\u{25B6}'; // Change to play symbol
       }
     }
   
@@ -101,14 +108,21 @@ export default function decorate(block) {
     buttons.play.addEventListener('click', () => {
       if (slideInterval) {
         stopInterval();
-        buttons.play.textContent = '\u{25B6}'; // Change to play symbol
       } else {
         startInterval();
-        buttons.play.textContent = '\u{23F8}'; // Change to pause symbol
       }
     });
   
-    // Initialize interval
-    startInterval();
+    // Add event listeners to dots
+    buttons.dot.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopInterval(); // Stop interval on dot navigation
+        curSlide = index;
+        updateSlidePosition();
+      });
+    });
+  
+    // Initialize paused state
+    stopInterval(); // Ensure carousel starts in a paused state
   }
   
