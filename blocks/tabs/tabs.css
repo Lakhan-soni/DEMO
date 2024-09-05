@@ -1,0 +1,108 @@
+.tabs .tabs-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 2.5rem;
+}
+
+.tabs.horizontal .tabs-list {
+  flex-direction: row;
+  overflow: scroll clip;
+  margin: 0 auto 2rem;
+  width: fit-content;
+  max-width: 100%;
+  padding: .25rem;
+}
+
+@media (width >= 1280px) {
+  .tabs {
+    display: grid;
+    grid-template-columns: minmax(25%, 384px) auto;
+    gap: 4rem;
+  }
+
+  .tabs.horizontal {
+    display: block;
+  }
+}
+
+.tabs .tabs-list button {
+  position: relative;
+  text-align: initial;
+  margin: 0;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(191 184 175 / 50%);
+  padding: 1.25rem;
+  color: initial;
+  font-weight: 400;
+  transition: all 0.35s ease-in-out;
+}
+
+.tabs .tabs-list button::after {
+  content: "";
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 1px;
+  background-color: var(--teal);
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.tabs.horizontal .tabs-list button {
+  flex: 0 0 max-content;
+  padding: 1rem;
+}
+
+.healthcare .tabs .tabs-list button::after {
+  background-color: var(--healthcare-blue);
+  bottom: -.125rem;
+}
+
+.tabs .tabs-list button p {
+  margin: 0;
+}
+
+.tabs .tabs-list button[aria-selected='true'] {
+  font-weight: 500;
+  box-shadow: 0 2px 16px 2px rgba(0 0 0 / 8%),
+    0 8px 32px 2px rgba(0 0 0 / 5%);
+}
+
+.tabs .tabs-list button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #121212 !important;
+  border-radius: 2px;
+}
+
+.tabs .tabs-list button[aria-selected='true']::after {
+  transform: scale(1);
+}
+
+.tabs.tabs.horizontal .tabs-list button[aria-selected='true']::after,
+.tabs.tabs.horizontal .tabs-list button:hover::after {
+  transform: scale(0.5, 1);
+}
+
+.tabs.horizontal .tabs-list button[aria-selected='true'] {
+  box-shadow: none;
+}
+
+.tabs .tabs-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs .tabs-panel :is(h2, h3, h4) {
+  margin-block: .5em;
+}
+
+@media (width >= 770px) {
+  .tabs .tabs-panel .img-wrapper picture > img {
+    max-width: 450px;
+  }
+}
