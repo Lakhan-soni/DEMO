@@ -63,3 +63,15 @@ section.carousel-container {
 .carousel.left .slide-img {
   order: 2;
 } 
+.carousel .carousel-buttons .btn{
+  background-color: #c51f1fcf;
+  color: black;
+  font-size: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 0px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+}

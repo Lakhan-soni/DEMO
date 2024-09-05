@@ -363,6 +363,35 @@
                   "label": "CTA Text"
                 }
               ]
+          },
+          {
+            "id": "tab",
+            "fields": [
+                  {
+                    "component": "multiselect",
+                    "name": "Tab_orientation",
+                    "label": "Orientation Select",
+                    "valueType": "string",
+                    "options": [
+                      { "name": "Vertical", "value": "vertical" },
+                      { "name": "Horizontal", "value": "horizontal" }
+                    ]
+                  },
+                  {
+                      "component": "text",
+                      "name": "tab_title",
+                      "label": "Tab Title"
+                    
+                  },
+                  {
+                    "component": "aem-content-fragment",
+                    "name": "picker",
+                    "label": "Content Fragment Picker",
+                    "valueType": "string",
+                    "variationName": "contentFragmentVariation"
+                  }
+                ]
+
           }
 
 ]
